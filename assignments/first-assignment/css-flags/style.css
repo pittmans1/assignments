@@ -1,0 +1,220 @@
+body, html{
+    background-color: #ccc;
+
+}
+.france{
+  padding: 33.33%;
+  background-color:#002495 ;
+  position: relative
+}
+.france:before{
+    content:"";
+    width: 33.33%;
+    height: 100%;
+    background-color:#ffffff;
+    position: absolute;
+    top:o;
+    bottom:0
+
+}
+.france:after{
+    content: "";
+    width: 33.33%;
+    height: 100%;
+    background-color:#ED2938 ;
+    position: absolute;
+    top:0;
+    right:0;
+
+
+}
+.germany{
+    padding: 33.33%;
+    background-color:#000000 ;
+    position: relative;
+    
+
+}
+
+.germany::before{
+    content: "";
+    width: 100%;
+    height: 33.33%;
+    background-color:#DE0002 ;
+    position: absolute;
+    left: 0;
+    top:33.33%
+}
+.germany:after{
+    content:"";
+    width: 100%;
+    height: 33.33%;
+    background-color:#FFCE00;
+    position: absolute;
+    left:0;
+    bottom:0
+
+}
+.mad{
+    padding: 33.33%;
+    background-color:#ffffff;
+    position: relative;
+    
+
+}
+.mad::before{ 
+    content: "";
+    width:66.66% ;
+    height: 50%;
+    background-color:#FC3E32 ;
+    position: absolute;
+    top:0;
+    right:0;
+
+}
+.mad::after{
+     content: "";
+    width:66.66% ;
+    height: 50%;
+    background-color:#007E39;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+.switz {
+    padding: 50%;
+    background-color:#FF0002;
+    position: relative;
+   
+}
+.switza{ 
+    content:"";
+
+    height: 60%;
+width:15%;
+   background-color:#ffffff;
+   top: 20%;
+   left:43%;
+   position: absolute;
+  
+}
+.switzb{
+    content:'';
+    
+    height: 15%;
+    width: 60%;
+    background-color: #ffffff;
+    top:43%;
+    left:20%;
+    position: absolute;
+
+}
+.sweden{
+    content:'';
+    padding: 50%;
+    background-color: #0269a6;
+    position: relative;
+}
+.swedena{
+    content:'';
+    height:100%;
+    width: 10%;
+    background-color: #fecc00;
+    left: 25%;
+    top: 0%;
+    position: absolute;
+}
+.swedenb{
+    content:'';
+    height: 10%;
+    width: 100%;
+    background-color:#fecc00 ;
+    left: 0%;
+    top: 45%;
+    position: absolute;
+}
+.gambia{
+    content: '';
+    padding: 50%;
+    background-color: #ffffff;
+    position: relative;
+}
+.gambiaa{
+    content: '';
+   height: 33%;
+   width: 100%;
+   background-color:#ce1127 ; 
+   left: 0%;
+   top: 0%;
+   position: absolute;
+}
+.gambiab{
+   content: '';
+   height: 33%;
+   width: 100%;
+   background-color: #3b7827; 
+   left: 0%;
+   bottom: 0%;
+   position: absolute; 
+}
+.gambiac{
+    content: '';
+   height: 22%;
+   width: 100%;
+   background-color: #0d1d8b; 
+   left: 0%;
+   bottom: 39%;
+   position: absolute;   
+}
+.japan{
+    content: '';
+    background-color: #ffffff;
+    position: relative;
+    padding: 50%;
+}
+.japana{
+    content: '';
+    border-radius:50% ;
+    background-color: #bc022c;
+    height:50% ;
+    width: 50%;
+    left:25%;
+    top:25%;
+    position: absolute;
+}
+.niger{
+    content: '';
+    background-color: #ffffff;
+    position: relative;
+    padding: 50%;
+}
+.niger-one{
+    content: '';
+    height: 33.33%;
+    width: 100%;
+    background-color:#e15307 ;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+}
+.niger-two{
+       content: '';
+    height: 33.33%;
+    width: 100%;
+    background-color:#10af2a ;
+    top: 66.66%;
+    left: 0%;
+    position: absolute;
+}
+.circle{
+    border-radius: 50%;
+    height: 30%;
+    width:30% ;
+    background-color:#e15307 ;
+    left: 35%;
+    top: 35%;
+    position: absolute;
+}
+
+   
+
