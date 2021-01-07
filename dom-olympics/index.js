@@ -42,7 +42,7 @@ button[1].id = "sendb";
 document.getElementById('sendb').addEventListener('click',function(){
  // for (var i = 0; i < input.textContent; i++  ){
    var newMess = document.createElement("div")
-   var newDiv = document.getElementById('input').value.innerHTML
+   var newDiv = document.getElementById('input').value
    newMess.innerHTML= newDiv;
     leftMess.appendChild(newMess);
     const leftMess = document.querySelectorAll(".left");
