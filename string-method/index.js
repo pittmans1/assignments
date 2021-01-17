@@ -1,0 +1,17 @@
+var hello = "hello"
+var upperHello = hello.toUpperCase()
+console.log(upperHello)
+var lowerHello = upperHello.toLowerCase()
+console.log(lowerHello)
+var hellos = (hello.toUpperCase() + hello.toLowerCase())
+console.log(hellos)
+var indexOfL = hello.indexOf('l')
+console.log(indexOfL)
+var helloWorld = "Hello World"
+var indexOfS = helloWorld.indexOf(' ')
+console.log(indexOfS)
+console.log(Math.floor(2.5))
+var first2HE= hello.slice(0, 2)
+console.log(first2HE)
+var firstSet = helloWorld.slice(0, 5)
+console.log(firstSet)
