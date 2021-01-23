@@ -1,0 +1,14 @@
+.html{
+    padding: 33%;
+}
+
+#divOne{
+    background-color:mediumspringgreen;
+    
+}
+#divTwo{
+    background-color: mediumturquoise;
+}
+#divThree{
+    background-color: red;
+}

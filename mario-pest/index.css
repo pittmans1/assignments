@@ -1,0 +1,67 @@
+
+#image1{
+    height: 50px;
+    width: 50px;
+}
+#goombas{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    background:brown;
+  background-image: url(https://static.wikia.nocookie.net/mario/images/9/9c/Goomba_-_MarioPartyStarRush.png/revision/latest/scale-to-width-down/652?cb=20190423153742), url(https://static0.thegamerimages.com/wordpress/wp-content/uploads/2019/08/Super-Mario-Maker-2-goomba.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right, left;
+  background-size:contain;
+height: 100px;
+}
+#title{
+    font-size: 100px;
+    font-family: fantasy;
+    text-align: center;
+    background-image: url(https://www.denofgeek.com/wp-content/uploads/2014/11/mario_primary.jpg?resize=620%2C432);
+    background-size: contain;
+    background-repeat: space;
+}
+#input1{
+    height: 50px;
+    align-content: center;
+}
+html {
+    background-color: lightgrey;
+}
+#bombs{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    background:lightgray;
+  background-image: url(https://4.bp.blogspot.com/_nJLGJOxc1is/TRug8E9g0xI/AAAAAAAAAF4/0KRY1g7OxyQ/s1600/Bob-omb.jpeg), url(https://www.mariowiki.com/images/thumb/9/9e/Bobomb_-_MarioPartyStarRush.png/1200px-Bobomb_-_MarioPartyStarRush.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right, left;
+  background-size:contain;
+height: 100px;
+}
+#cheep{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    background:lightskyblue;
+  background-image: url(https://www.clipartmax.com/png/middle/209-2094942_cheep-cheep-g-233-antsuper-mario-world-cheep-cheep-super-mario-bros.png),url(https://spng.pngfind.com/pngs/s/12-124324_mario-odyssey-png-cheep-cheep-super-mario-odyssey.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right, left;
+  background-size:contain;
+height: 100px;
+}
+#button{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+#button:hover{
+    background-color: crimson;
+    color:white;
+}
+#total{
+    display: flex;
+    justify-content: center;
+    
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"/>
+    <title>Travel Form</title>
+</head>
+<header name="header">Welcome To Terrible Airlines</header>
+<body>
+    <form name="myForm" id="MyForm">
+        <input type="text" placeholder="First Name" required name="firstName" id="Fname">
+        <input type="text" placeholder="Last Name" required name="lastName" id="Lname">
+        <input type="number" placeholder="Age" required name="Age" id="Age">
+       Male    <input type="radio" name="gender" value="Male" >
+       Female  <input type="radio" name="gender" value="Female">
+       Prefer Not to Say <input type="radio" name="gender" value="PNTS">
+       <select id="select" name="select">
+           <option name="place" value="Baltimore">Baltimore</option>
+           <option name="place" value="Jacksonville">Jacksonville</option>
+           <option name="place" value="Las Vegas">Las Vegas</option>
+       </select>
+       Kosher<input type="checkbox" name="diet" value="Kosher">
+       Vegan <input type="checkbox" name="diet" value="vegan">
+       Anti-Chocolate, we dont serve your kind on this airline!!<input type="checkbox" name="diet" value="Anti-Chocolate">
+       <button id="button" name="submit">Submit</button>
+    </form>
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
