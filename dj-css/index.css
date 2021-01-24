@@ -1,0 +1,84 @@
+body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+#container{
+   display: grid; 
+   height: 1000px;
+   width: 100%;
+   grid-template-columns: repeat(3, 33%);
+   
+  
+}
+#box1{
+    background-color: floralwhite;
+    opacity: 100%;
+    box-shadow: 25px 17px 12px springgreen;
+    border-radius: 13%;
+    border: thick;
+    margin: 8px;
+    transition: background-color 500ms ease-in 200ms, opacity 1s linear 200ms;
+}
+#box1:hover{
+    background-color: hotpink;
+    opacity: 70%;
+}
+#box2{
+    background-color: rgb(0, 255, 149);
+    opacity: 100%;
+    box-shadow: springgreen;
+    border-radius: 45%;
+    border: thick;
+    margin: 8px;
+    transition: background-color 500ms ease-in 200ms, box-shadow 1s linear 200ms;
+}
+#box2:hover{
+    background-color: orangered;
+    box-shadow: 15px 10px 5px white;
+}
+#box3{
+    background-color:white;
+    opacity: 100%;
+    box-shadow: purple;
+    border-radius: 45%;
+    border: thick;
+    margin: 8px;
+    transition: background-color 500ms ease-in 200ms, margin 1s linear 200ms;
+}
+#box3:hover{
+    background-color: yellow;
+    margin: 20px;
+}
+#box4{
+    border: 5px dotted red;
+    background-color: dodgerblue;
+    position: sticky;
+    margin: 15%;
+    border-radius:73%;
+    transition: border 1s linear, position 500ms ease;
+}
+#box4:hover{
+    border: gold double;
+    position: relative;
+}
+#box5{
+    background-image:url(https://www.hellomagazine.com/imagenes/healthandbeauty/health-and-fitness/2020040187313/funniest-memes-about-self-isolation/0-419-388/meme-zoom-z.jpg) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border:12px fuchsia;
+    transition: background-image 50ms ease 1s, border 1s linear;
+}
+#box5:hover{
+    background-image: url(https://ih1.redbubble.net/image.1018283078.5692/st,small,507x507-pad,600x600,f8f8f8.jpg);
+    border: hotpink;
+}
+#box6{
+    background-color: hotpink;
+    border: 50px solid greenyellow;
+    transition: background-color 1s linear, border 1s linear;
+}
+#box6:hover{
+background-color: darkturquoise;
+border: 15px dotted pink;
+}
