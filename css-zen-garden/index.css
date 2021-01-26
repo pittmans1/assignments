@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    background-color: white;
+    padding: 5px;
+    height:auto;
+}
+.container {
+    /* give the container display grid */
+    /* with six rows, 50px high */
+    /* default all cells/children on the left be 2/3 the screen width, and all on the left 1/3 */
+    display: grid;
+    /* grid-template-rows: repeat(6, 50px); */
+    grid-template-columns: repeat(3, 1fr);
+    
+    grid-auto-rows: max-content;
+    overflow: hidden;
+   /* grid-template-rows: repeat(6, 50px);*/
+   height: 100%;
+    grid-template-areas: 
+    "title title button"
+    "b b author"
+    "c c link"
+    "d d empty"
+    "f f f"
+    "f2 f2 f2";
+
+}
+.container > div {
+    border: solid black 2px;
+    
+    grid-auto-rows: 1fr;
+    
+    
+}
+.title{
+    grid-area: title;
+}
+.text1{
+    grid-area: b ;
+    grid-column: 1/3;
+}
+.text2{
+    grid-area: c;
+    grid-column: 1/3;
+}
+.text3{
+    grid-area: d;
+    grid-column: 1/3;
+}
+.button{
+    grid-area: button;
+}
+.space{
+    grid-area: empty ;
+}
+
+.authors {
+    background-color: lightcoral;
+   /* grid-column: 2/3;
+    grid-row: 4/6;*/
+    grid-area:author;
+    
+}
+.links {
+    background-color: lightpink;
+    /*grid-column:2/3 ;
+    grid-row: 2/4;*/
+    grid-area:  link ;
+}
+
+.footer {
+    /* make these span the width of the page */
+    background-color: aquamarine;
+    grid-column: 1/4;
+    grid-area: f;
+   
+}
+.footer2 {
+    /* make these span the width of the page */
+    background-color: aquamarine;
+    grid-column: 1/4;
+    grid-area: f2;
+   
+}
+
+@media (max-width: 900px){
+    body{
+        width: 100%;
+    }
+    /* use this media query to help these two cells drop to the bottom when screens are smaller */
+    .authors {
+         grid-area: authors;
+         
+    }
+    .links {
+       grid-area: links ;
+
+    }
+    /* container could use some help so that it's children are full screen width */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "title " 
+        "button"
+        "b"
+        "c"
+        "d"
+        "f"
+        "f2"
+        "authors"
+        "links";
+    }
+    .title{
+        grid-area: title;
+    }
+    .text1{
+        grid-area: b ;
+    }
+    .text2{
+        grid-area: c;
+    }
+    .text3{
+        grid-area: d;
+    }
+    .button{
+        grid-area: button;
+    }
+    .footer{
+        grid-area: f;
+    }
+    .footer2{
+        grid-area: f2;
+    }
+}
+
+/* FLEX */
+/* use flexbox to make the icons behave like css zen garden's social icons */
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+.icons > div {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
