@@ -1,0 +1,85 @@
+{
+   " menu" : [
+       {
+           "appetisers" : [
+               {
+                   "name": " gooey Mozzarella sticks",
+                   "Ingridents": ["bread crumbs", "oil-frying","the best mozzarella"],
+                   "description": "the best crunchy cheesy mozzarella stick youll ever have"
+
+               },
+               {
+                   "name" : "breadsticks (from olive garden)",
+                   "Ingridents" : ["sourdough bread","lots of salt", "mystery seasoning"],
+                   "description" : "the saltiest yet tasties breadstick ever i promise"
+
+               },
+               {
+                   "name": "tomato soup",
+                   "ingridents": ["tomatos", "tomato puree", "grilled cheese"],
+                   "description": "amazing succulent tomato soup with the chessiest of grilled cheesy feel it melt in your mouth"
+
+               }
+           ],
+              "cold sandwiches"  : [
+                  {
+                      "name": "ham and cheese",
+                      "ingridents":["ham", "cheese","tomato", "pickeles","mustard"],
+                      "description": " not the worst sandwich you could have but its not the best either it meh."
+
+                  },
+                  {
+                      "name": "the Ultimate Three-Meat Picnic Sandwhich",
+                      "ingridents":["french bread","dijon mustard","mayonnaise","deli ham"," deli sliced raosted turkey","delic slice roast beef","monterey Jack","cheedar cheese","thinly sliced red onion","dill pickles","spring mixed greens","teaspoon red wine vinegar","teaspoon olive oil"],
+                      "description" : "the ultimate three meat sandwich with your three favortie deli meats gently stacked together for any such occasion!"
+
+                  },
+                  {
+                      "name":"All American deli Sandwhich",
+                      "ingridents":["mayonnaise", "toasted bread-white","land o lakes deli american", "deli ham", "tomato"," thinly sliced turkey breast"],
+                      "description":" the all american sandwich has what every american desires on a sandwhich no need too say more."
+                  }
+
+
+                  ],
+                  "hot sandwhiches" :[
+                      {
+                          "name":"meatball sub",
+                          "ingridents":["marinara", "italian bread foot long", " zesty meatballs","parmesian cheese"],
+                          "description":"the best sub out there just spicy enough to let you know you are eating some spicy meatballs marinated in marinara."
+                      },
+                      {
+                          "name": " cheese steak sub",
+                          "ingridents":["thinly cut steak", "white american cheese", "grilled onions"],
+                          "description":"cheese steak sub with juciy steak and melted cheese."
+                      }
+                  ],
+                  "desserts": [
+                      {
+                          "name": " massive chocolate chip cookie",
+                          "indgridents": ["milk","flour", " eggs","chocolate chip","sugar"],
+                          "description":"the softest sweetest chocalte chip cookie on the east coast"
+                      },
+                      {
+                          "name": " ice cream - vanilla",
+                          "indgridents":["whipped cream", " milk","vanilla extract"],
+                          "description":"taste like mcdonalds ice cream we dont know how"
+                      }
+                  ],
+                  "drinks" : [
+                      {
+                          "name":"water",
+                          "indgridents":["h20", "random minerals"],
+                          "description":"spring water"
+                      },
+                        {
+                            "name":"soda",
+                            "indgridents":["mountain dew","coke","dr.pepper","root beer","yuengling"],
+                            "description":"lots of soft drinks and one  beer the only  beer that is good!"
+                        }
+                  ]
+       }
+   ]
+
+   
+}
