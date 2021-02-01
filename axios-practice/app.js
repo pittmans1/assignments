@@ -28,8 +28,8 @@ function getAll(){
  //getAll();
 function makeTodo(data){
     document.getElementById("container").innerHTML = ""
-    for (i = 0; i < data.length ; i++){
-    //create elements
+    for (let i = 0; i < data.length ; i++){
+    console.log(data[i])
     const containr = document.createElement("div")
     const title = document.createElement("h1")
     const deleteButton = document.createElement("button")
@@ -80,18 +80,21 @@ function makeTodo(data){
                 }
                 const url = `https://api.vschool.io/scottpittman/todo/${id}`;
                 axios.put(url, completer)
-                .then(res => res.data)
+                .then(res =>{
+                    if(res.data.completed === true){
+                        title.style.textDecoration = "line-through"
+                    }
+                })
                 .catch(err => console.log(err))
-                if(data[i].completed === true){
-                    title.style.textDecoration = "line-through"
-                }
+                
         })
 
 
 
      deleteButton.addEventListener("click", (event) => {
          event.preventDefault()
-         
+          console.log(id)
+          console.log(data[i])
             axios.delete(`https://api.vschool.io/scottpittman/todo/${id}`)
             .then(response => console.log(response.data))
             .catch(error => console.log(error));
