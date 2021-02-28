@@ -28,11 +28,31 @@ class App extends React.Component {
 
    handleSubmit(e) {
       e.preventDefault()
-      const newBadge = [...this.state.badgeList]
+      
 
-      newBadge.push(this.state)
+     /* newBadge.push(this.state)
       this.setState({
          badgeList: newBadge
+      })*/
+
+      // badgeList is an array of name badges 
+      // it's an array of objects [{namebadge}, {nameBadge}]
+      // each object is a name badge {firstName: "jane", lastName: "doe"}
+
+      const newEntry = { 
+         firstName: this.state.firstName,
+         lastName: this.state.lastName,
+         email: this.state.email,
+         birthPlace: this.state.birthPlace,
+         phone: this.state.phone,
+         favFood:this.state.favFood,
+         about: this.state.about
+      }
+      this.setState(prevState => {
+         return { 
+            badgeList: [...prevState.badgeList, newEntry]
+            
+         }
       })
 
       Array.from(document.querySelectorAll("input")).forEach(

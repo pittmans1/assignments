@@ -1,0 +1,33 @@
+body{
+    padding:15px;
+}
+.dark-theme{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:darkcyan;
+    height: 35px;
+    width: 15%;
+    background-image: url(https://wallpapercave.com/wp/wp3539891.jpg);
+    background-size: cover;
+
+
+
+}
+.dark-nav{
+    display:flex;
+    justify-content: space-around;
+    font-style: cursive;
+    
+}
+.light-nav{
+    background-color: darkgreen;
+}
+.dark-button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:darkcyan;
+
+
+}

@@ -6,7 +6,7 @@ import Friend from "./Friend"
 
 
 function FriendsList(props){
-    const petlist = props.pets.map(pet => <Friend name={pet.name} breed={pet.breed} />)
+    const petlist = props.pets.map((pet, i) => <Friend key={pet.name + i} name={pet.name} breed={pet.breed} />)
     return(
         <div className="friend">
             <h3 style={{fontFamily:"cursive", color:"turquoise"}} key={props.name}>My name is {props.name}</h3>

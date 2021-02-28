@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+
 import React from "react"
 
 class App extends React.Component{
@@ -18,19 +18,21 @@ class App extends React.Component{
         })
         
     }
-        handleClick() {
-            this.setState({
-                li: [
-                    ...this.state.li,
-                    this.state.name
-                ]
-            })
+    handleClick() {
+        
+        this.setState({
+            li: [...this.state.li,
+                this.state.name
+            ]
+        })
+               
             this.state.name=""
         }
     
 
     render(){
-        const list =this.state.li
+       
+        
         return(
             <div>
                 <label>Insert Desired Names Here
@@ -39,9 +41,9 @@ class App extends React.Component{
                 <h1>{this.state.name}</h1>
                 <button onClick={this.handleClick}>Click me to complie</button>
                 <ol>
-                    {list.map(s => (
-                        <li>{s}</li>
-                    ))}
+                   {this.state.li.map(s => (
+                       <li >{s}</li>
+                   ))}
                 </ol>
             </div>
         )
