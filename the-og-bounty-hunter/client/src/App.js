@@ -17,6 +17,7 @@ export default function App(){
         })
         .catch(err => console.log(err))
     }
+
     function deleteBounty(bountyId){
         axios.delete(`/bounties/${bountyId}`)
         .then(res => {
@@ -26,10 +27,15 @@ export default function App(){
     }
     function editBounty( updates, bountyId ){
         axios.put(`/bounties/${bountyId}`, updates)
-        .then(res=> {
+        .then(res => {
             setBounties(prevBounties => prevBounties.map(bounty => bounty._id !== bountyId ? bounty : res.data))
         })
         .catch(err=> console.log(err))
+    }
+    function handleFilter(e){
+        axios.get(`/bounties/search/type?type=${e.target.value}`)
+        .then(res => setBounties(res.data))
+        .catch(err => console.log(err))
     }
     useEffect(()=>{
       getBounties()
@@ -39,13 +45,21 @@ export default function App(){
             <AddBountyForm 
             submit={addBounty}
             btnText="Submit"/>
-            {bounties.map(bounty =>
+
+            <h4>Filter by Type</h4>
+            <select onChange={handleFilter} className="filter">
+            <option>- Select a Type -</option>
+            <option value={true}>Jedi</option>
+            <option value={false}>Sith</option>
+            </select>
+
+            {bounties.map(bounty =>(
                  <Bounty
                   {...bounty}
                    key={bounty.firstName + bounty._id}
                    deleteBounty={deleteBounty} 
                    editBounty={editBounty}
-                   />)}
+                   />))}
 
         </div>
     )
