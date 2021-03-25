@@ -1,12 +1,14 @@
 const express = require('express')
 const commentRouter = express.Router()
 const Comment = require("../models/comment")
+const Post = require('../models/post')
 
 
 
 
 
-commentRouter.post('/', (req, res, next) =>{
+commentRouter.post('/:postId', (req, res, next) =>{
+    req.body.post= req.params.postId
     req.body.user = req.user._id
     const comment = new Comment(req.body)
     comment.save((err, newComment) =>{
@@ -14,11 +16,20 @@ commentRouter.post('/', (req, res, next) =>{
             res.status(500)
             return next(err)
         }
+        Post.findOneAndUpdate(
+            {_id: req.params.postId},
+            {$push: {comment: newComment}},
+            (err, updatedPost) =>{
+                res.status(500)
+                return next(err)
+            }
+        
+        )
         return res.status(201).send(newComment)
     })
 })
 //get comment for a specific post.
-commentRouter.get('/post/:commentId', (req, res, next) =>{
+commentRouter.get('/:commentId', (req, res, next) =>{
     Comment.findById(req.params.postId.commentId, (err, comment) =>{
         if(err){
             res.status(500)
@@ -32,7 +43,7 @@ commentRouter.get('/post/:commentId', (req, res, next) =>{
     })
 })
 
-commentRouter.put('/post/:commentId', (req, res, next) =>{
+commentRouter.put('/:commentId', (req, res, next) =>{
     Comment.findByIdAndUpdate(
         {_id: req.params.postId.commentId, user: req.user._id},
         req.body,
@@ -48,7 +59,7 @@ commentRouter.put('/post/:commentId', (req, res, next) =>{
     )
 })
 
-commentRouter.delete('/post/:commentId', (req, res, next) =>{
+commentRouter.delete('/:commentId', (req, res, next) =>{
     Comment.findByIdAndDelete({_id: req.params.postId.commentId, user: req.user._id}, (err, comment) =>{
         if(err){
             res.status(500)
