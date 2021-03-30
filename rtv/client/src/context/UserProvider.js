@@ -1,6 +1,5 @@
 import React, {useState} from "react"
 import axios from "axios"
-import {config} from "dotenv/types"
 
 export const UserContext = React.createContext()
 
@@ -19,7 +18,8 @@ export default function UserProvider(props){
         user: JSON.parse(localStorage.getItem('user')) ||{},
         token: localStorage.getItem('token') || "",
         post:[],
-        comment:[]
+        comment:[],
+        errMsg:""
     }
 
     const [userState, setUserState]= useState(initState)
@@ -36,7 +36,7 @@ export default function UserProvider(props){
                 token
             }))
         })
-        .catch(err => console.log(err.response.data.errMsg))
+        .catch(err => handleAuthError(err.response.data.errMsg))
     }
         function login(credentials){
             axios.post('/auth/login', credentials)
@@ -52,7 +52,7 @@ export default function UserProvider(props){
                     token
                 }))
             })
-            .catch(err => console.log(err.response.data.errMsg))
+            .catch(err => handleAuthError(err.response.data.errMsg))
         }
         function logout(){
             localStorage.removeItem('token')
@@ -64,6 +64,20 @@ export default function UserProvider(props){
                 comment:[]
             })
         }
+        function handleAuthError(errMsg){
+            setUserState(prevState =>({
+              ...prevState,
+              errMsg
+            }))
+          }
+          
+           function restAuthError(){
+             setUserState(prevState => ({
+               ...prevState,
+               errMsg:""
+             }))
+           }
+
         function getUserPosts(){
             userAxios.get('/api/post/user')
             .then(res => {
@@ -112,7 +126,8 @@ export default function UserProvider(props){
             login,
             logout,
             addPost,
-            addComment
+            addComment,
+            restAuthError
         }}>
 
             {props.children}

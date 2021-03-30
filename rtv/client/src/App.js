@@ -1,9 +1,10 @@
 import React, {useContext} from "react"
 import {Switch, Route, Redirect} from 'react-router-dom'
-import Navbar from "./component"
-import Auth from "./component"
-import Profile from "./component"
-import Public from "./component"
+import Navbar from "./component/Navbar.js"
+import Auth from "./component/Auth.js"
+import Profile from "./component/Profile"
+import Public from "./component/Public"
+import ProtectedRoute from "./component/protectedRoute.js"
 import {UserContext} from "./context/UserProvider"
 
 
@@ -11,18 +12,22 @@ export default function App(){
     const {token, logout} = useContext(UserContext)
     return(
         <div className="app">
-            <Navbar logout={logout}/>
+{  token  &&  <Navbar logout={logout}  token={token}/>}
              <Switch>
                  <Route
                     exact path = "/"
                     render={()=> token ? <Redirect to="/profile"/> : <Auth/>}/>
-                <Route 
+                <ProtectedRoute 
                      path="/profile"
-                    render={()=> <Profile/>}
+                    component={Profile}
+                    redirectTo='/'
+                    token={token}
                 />
-                <Route 
+                <ProtectedRoute 
                      path="/public"
-                    render={()=> <Public/>}
+                    component={Public}
+                    redirectTo='/'
+                    token={token}
                 />
              </Switch>
         </div>
