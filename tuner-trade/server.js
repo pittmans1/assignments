@@ -24,6 +24,7 @@ app.use('/auth', require('./routes/'))
 app.use('/api', expressJwt({secret: process.env.SECRET}))
 app.use('/api/post', require('./routes/posts'))
 app.use('/api/message', require('./routes/mesages'))
+app.use('api/comment/', require('./routes/comment'))
 
 app.use((err, req, res, next) =>{
     console.log(err)
