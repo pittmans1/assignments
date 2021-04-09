@@ -8,14 +8,14 @@ const postSchema = new Schema({
         ref:"User",
         required: true
     },
-    content:{
+    post:{
         type: String,
         required:true
 
     },
     img:{
         data: Buffer,
-        contentType: String
+        type: String
     }
 })
 

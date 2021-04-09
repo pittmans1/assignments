@@ -1,14 +1,14 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import {BrowserRouter} from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import App from "./app.js"
-import UserProvider from "./context/Username.js"
+import UserProvider from "./context/UserProvider"
 
 ReactDOM.render(
     <BrowserRouter>
-    <UserProvider>
-        <App/>
-    </UserProvider>
+        <UserProvider>
+             <App/>
+         </UserProvider>
     </BrowserRouter>,
     document.getElementById('root')
 )

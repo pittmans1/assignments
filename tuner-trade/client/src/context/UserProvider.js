@@ -29,7 +29,7 @@ export default function UserProvider(props){
             localStorage.setItem('token', token)
             localStorage.setItem('user', JSON.stringify(user))
             setUserState(prevState => ({
-                ...prevUserState,
+                ...prevState,
                 user,
                 token
             }))
@@ -43,8 +43,8 @@ export default function UserProvider(props){
             localStorage.setItem('token', token)
             localStorage.setItem('user', JSON.stringify(user))
             getUserPosts()
-            getComments()
-            getMessages()
+            //getComments()
+           // getMessages()
             setUserState(prevUserState =>({
                 ...prevUserState,
                 user,
